@@ -55,29 +55,17 @@ Used the trained linear regression model to predict the target variable on the t
 # Data Exploration:
 
 You examined the dataset to understand its structure, checked data types, and ensured there were no missing values.
-Data Preprocessing:
+# Data Preprocessing:
 
 Categorical variables were one-hot encoded to make them compatible with machine learning models.
 The dataset was modified to include these encoded variables and exclude the original categorical columns.
-Model Training:
+# Model Training:
 
 You chose a linear regression model for the task, initialized it, and trained it using the training dataset.
-Model Testing:
+# Model Testing:
 
 The trained model was then used to make predictions on a separate test dataset.
-Next Steps:
+# Next Steps:
 
 Depending on the project requirements, you might want to evaluate the model's performance using metrics like Mean Squared Error (MSE) or R-squared.
 Further optimization of the model or exploration of other algorithms could be considered.
-
-# Model Comparison:
-
-Compared the performance of different models using a heatmap visualization.
-
-# Test Data Prediction:
-
-Applied the trained model to predict outcomes on a separate test dataset.
-
-# Conclusion:
-
-Concluded the process by reiterating key steps and notifying the successful generation of the output file.
