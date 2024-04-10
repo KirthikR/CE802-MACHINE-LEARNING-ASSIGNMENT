@@ -38,45 +38,53 @@ This script demonstrates a typical workflow for a supervised machine learning cl
 
 # CODE 2
 # Project Overview:
-# 1. Data Loading and Exploration:
+# Project Title
 
-You started by loading the dataset (CE802_P3_Data.csv) into a Pandas DataFrame named data_p3.
-Checked the first six rows of the dataset using data_p3.head() to understand its structure.
-Explored data types, information, and checked for missing values using data_p3.dtypes, data_p3.info(), and data_p3.isnull().sum().
-# 2. Data Preprocessing:
+Short description of the project.
 
-Encoded categorical variables F6 and F10 using one-hot encoding with pd.get_dummies.
-Concatenated the encoded variables with the original dataset (data_p3_edited).
-Dropped the original categorical columns (F6 and F10) from the dataset.
-# 3. Data Splitting:
+## Table of Contents
 
-Separated the features (data_p3_edited_features) and the target variable (data_p3_edited_outcome) from the edited dataset.
-Split the data into training and testing sets using train_test_split.
-# 4. Model Training - Linear Regression:
+- [Data Loading and Exploration](#data-loading-and-exploration)
+- [Data Preprocessing](#data-preprocessing)
+- [Data Splitting](#data-splitting)
+- [Model Training - Linear Regression](#model-training---linear-regression)
+- [Model Testing and Prediction](#model-testing-and-prediction)
+- [Explanation](#explanation)
+- [Next Steps](#next-steps)
 
-Created a linear regression model (lm_reg_model) using scikit-learn's LinearRegression.
-Trained the model on the training data with lm_reg_model.fit.
-# 5. Model Testing and Prediction:
+## Data Loading and Exploration
 
-Loaded the test dataset (CE802_P3_Test.csv) into data_p3_test.
-Applied the same preprocessing steps as in the training set to prepare the test data.
-Used the trained linear regression model to predict the target variable on the test set (lm_reg_pred).
+- The dataset "CE802_P3_Data.csv" was loaded into a Pandas DataFrame named `data_p3`.
+- Initial exploration involved examining the first six rows of the dataset using `data_p3.head()` to understand its structure.
+- Data types were checked using `data_p3.dtypes`, general information about the dataset was obtained using `data_p3.info()`, and missing values were identified using `data_p3.isnull().sum()`.
 
-# Explanation:
-# Data Exploration:
+## Data Preprocessing
 
-You examined the dataset to understand its structure, checked data types, and ensured there were no missing values.
-# Data Preprocessing:
+- Categorical variables F6 and F10 were encoded using one-hot encoding with `pd.get_dummies`.
+- Encoded variables were concatenated with the original dataset to create `data_p3_edited`.
+- Original categorical columns (F6 and F10) were dropped from the dataset to ensure compatibility with machine learning algorithms.
 
-Categorical variables were one-hot encoded to make them compatible with machine learning models.
-The dataset was modified to include these encoded variables and exclude the original categorical columns.
-# Model Training:
+## Data Splitting
 
-You chose a linear regression model for the task, initialized it, and trained it using the training dataset.
-# Model Testing:
+- Features and the target variable were separated from the edited dataset to create `data_p3_edited_features` and `data_p3_edited_outcome`, respectively.
+- The data was split into training and testing sets using `train_test_split` function from scikit-learn.
 
-The trained model was then used to make predictions on a separate test dataset.
-# Next Steps:
+## Model Training - Linear Regression
 
-Depending on the project requirements, you might want to evaluate the model's performance using metrics like Mean Squared Error (MSE) or R-squared.
-Further optimization of the model or exploration of other algorithms could be considered.
+- A linear regression model (`lm_reg_model`) was created using scikit-learn's `LinearRegression`.
+- The model was trained on the training data using `lm_reg_model.fit`.
+
+## Model Testing and Prediction
+
+- The test dataset "CE802_P3_Test.csv" was loaded into `data_p3_test`.
+- Similar preprocessing steps as the training set were applied to prepare the test data.
+- The trained linear regression model was used to predict the target variable on the test set, resulting in `lm_reg_pred`.
+
+## Explanation
+
+- **Data Exploration:** This step ensures a thorough understanding of the dataset's structure, data types, and presence of missing values, providing a foundation for subsequent analysis.
+- **Data Preprocessing:** Categorical variables are encoded to enable machine learning models to process them effectively. Dropping original categorical columns ensures streamlined data for model compatibility.
+- **Model Training:** Linear regression, chosen for its simplicity and interpretability, is trained on the prepared data to establish patterns between features and target variable.
+- **Model Testing:** The trained model is evaluated on unseen data to assess its predictive performance and generalization capabilities.
+- **Next Steps:** Evaluation metrics such as Mean Squared Error (MSE) or R-squared could be employed to gauge model performance. Further optimization or exploration of alternative algorithms may be considered based on project requirements and model performance.
+
