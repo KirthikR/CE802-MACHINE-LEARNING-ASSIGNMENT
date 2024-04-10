@@ -1,29 +1,40 @@
 # CE802-MACHINE-LEARNING-ASSIGNEMNT
 
 # CODE 1
-# Data Setup and Exploration:
+# Machine Learning Project: Binary Classification with Python
 
-Loaded the training data and checked for any missing values.
+This Python script is part of a machine learning project aimed at solving a binary classification problem. The objective is to predict the target variable labeled "Class" based on a set of input features labeled F1 to F19.
 
-# Data Cleaning:
+## Overview
 
-Removed columns with missing data to ensure a clean dataset for analysis.
+The project involves the following key steps:
 
-# Correlation Analysis:
+1. **Data Loading and Preprocessing:**
+   - Import necessary libraries and load the training and test datasets (`CE802_P2_Data.csv` and `CE802_P2_Test.csv`) using pandas.
+   - Check for missing values in the training dataset and drop the column "F20" which contains missing values.
+   - Split the datasets into features (X) and target variable (y), and handle missing values by replacing them with the mean of the respective feature using an imputer.
 
-Explored relationships between features by visualizing a correlation matrix.
+2. **Exploratory Data Analysis (EDA):**
+   - Compute a correlation matrix to examine the relationships between features. This helps in understanding feature importance and potential multicollinearity issues.
 
-# Handling Missing Values:
+3. **Model Building:**
+   - Employ three different classifiers: Decision Tree, Random Forest, and Gradient Boosting Machine (GBM).
+   - Train each classifier on the training data after handling missing values and evaluate their performance using accuracy score on the test data.
 
-Imputed missing values using the average, ensuring completeness for further analysis.
+4. **Model Evaluation:**
+   - Print out the accuracy scores of each model and visualize them using a heatmap.
+   - Utilize GridSearchCV to tune hyperparameters for the Gradient Boosting Machine classifier to improve its performance.
 
-# Model Training and Evaluation:
+5. **Test Data Prediction:**
+   - Select the best model (GBM) and train it on the entire training dataset.
+   - Use the trained model to predict the target variable for the test dataset.
+   - Add the predicted labels to the test dataset, and save the modified dataset as a CSV file (`CE802_P2_Test.csv`).
 
-Trained Decision Tree and Random Forest models, assessing their predictive accuracy.
+## Conclusion
 
-# Optimizing Model Performance:
+This script demonstrates a typical workflow for a supervised machine learning classification problem. It covers data loading, preprocessing, model training, evaluation, and prediction. Additionally, it incorporates techniques for handling missing values and hyperparameter tuning to improve model performance.
 
-Used GridSearchCV to find the best settings for a Gradient Boosting Machine model.
+
 
 # CODE 2
 # Project Overview:
